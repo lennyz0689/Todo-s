@@ -1,6 +1,8 @@
+import Style from './CreateTodoButton.module.css'
+
 const CreateTodoButton = () => {
-    return(
-        <button>➕</button>
+    return (
+        <button className={Style.CreateTodoButton}>+</button>
     )
 }
 

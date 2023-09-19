@@ -1,6 +1,11 @@
+import Style from './TodoSearch.module.css'
+
 const TodoSearch = () => {
     return (
-        <input type="text" placeholder="Ingresar Todo'" />
+        <input
+            className={Style.TodoSearch}
+            placeholder="Ingresar Todo'"
+        />
     )
 }
 
