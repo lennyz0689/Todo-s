@@ -1,12 +1,8 @@
+import { IconComplete } from '../IconComplete/IconComplete';
+import { IconDelete } from '../IconDelete/IconDelete';
 import Style from './TodoItem.module.css'
 
-const combinacionx = `${Style.Icon} ${Style.IconDelete}`
-
 const TodoItem = (props) => {
-
-    const iconClasses = props.completed
-        ? `${Style.Icon} ${Style.IconCheck} ${Style.IconCheckActive}`
-        : `${Style.Icon} ${Style.IconCheck}`;
 
     const parrafo = props.completed
         ? `${Style.TodoItemP} ${Style.TodoItemPComplete} `
@@ -15,9 +11,9 @@ const TodoItem = (props) => {
     return (
 
         <li className={Style.TodoItem}>
-            <span className={iconClasses}>v</span>
+            <IconComplete completed={props.completed} onComplete={props.onComplete}/>
             <p className={parrafo}>{props.text}</p>
-            <span className={combinacionx}>x</span>
+            <IconDelete onDelete={props.onDelete}/>
         </li>
     )
 }
